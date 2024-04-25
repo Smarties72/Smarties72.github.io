@@ -99,3 +99,26 @@ section::before{
 .espace img {
     margin-bottom: 20px; 
 }
+
+.bouton{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bouton a{
+    color:tomato;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+}
+
+.btn{
+    transition: 00.6s ease;
+}
+
+.btn:hover{
+    background-color: #fff;
+    color: #000
+}
