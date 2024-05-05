@@ -115,10 +115,10 @@ section::before{
 }
 
 .btn{
-    transition: 00.6s ease;
+    transition: 00.4s ease;
 }
 
 .btn:hover{
     background-color: #fff;
-    color: #000
+    color: #808080
 }
