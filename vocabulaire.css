@@ -1,0 +1,21 @@
+.definition {
+    color: white;
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 10px;  
+}
+
+body{
+    background-color: #101010;
+}
+
+h2 {
+    color: white; 
+    font-weight: bold; 
+    text-decoration: underline; 
+    text-align: center; 
+}
+
+img {
+    width: 410px; 
+    margin: 20px 10px 10px;
+}
