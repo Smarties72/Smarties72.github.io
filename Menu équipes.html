@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu E-sport</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(fond\ équipe\ brawls\ stars.png);
+            margin: 20;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120vh;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button {
+            background-color:blueviolet; 
+            border: none; 
+            color: white;
+            text-align: center;
+            text-decoration: none; 
+            display: inline-block;
+            font-size: 30px; 
+            padding: 20px 20px; 
+            margin: 40px 0; 
+            cursor: pointer;
+            border-radius: 5px; 
+            transition: background-color 0.3s; 
+            position: relative;
+            overflow: hidden;
+        }
+
+        .button:hover {
+            background-color:blueviolet; 
+        }
+
+        .button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color:deeppink; 
+            transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s;
+            border-radius: 50%;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        .button:hover::after {
+            width: 0;
+            height: 0;
+        }
+
+        .button span {
+            z-index: 1;
+            position: relative;
+        }
+
+        /* Ajout de styles pour les images */
+        .images-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .images-container img {
+            margin: 0 10px;
+        }
+
+        /* Style pour les images sur mobile */
+        @media screen and (max-width: 600px) {
+            .images-container {
+                flex-direction: column;
+            }
+
+            .images-container img {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body >
+    <img src="Amérique.png" style="float: left;">
+    <div class="button-container">
+        <button class="button"><span>Amérique du Nord</span></button>
+        <button class="button"><span>Amérique du Sud</span></button>
+        <button class="button"><span>Asie</span></button>
+        <button class="button"><span>Europe</span></button>
+    </div>
+    <div class="images-container">
+        <img src="fond europe.png">
+        <img src="asie.png">
+    </div>
+</body>
+</html>
