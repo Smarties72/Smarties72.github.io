@@ -1,0 +1,213 @@
+body {
+    background-color: #101010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--main-family);
+    flex-direction: column;
+    height: 900vh;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+} 
+
+.section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    gap: 20px; 
+}
+
+.section-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 60px; 
+}
+
+.section {
+    z-index: 1;
+    padding: 10px;
+    margin: 10px;
+    border: 4px solid #2b2b2b;
+    border-radius: 10px;
+    position: relative;
+    color: white;
+    height: 500px;
+    width: 500px; 
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+    user-select: none;
+}
+
+.section-card:hover .section {
+    transform: rotateY(180deg);
+}
+
+.section-card:hover .section::before {
+    transform: rotateY(-180deg);
+}
+
+.section::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    opacity: 0.5;
+    transform: rotateY(180deg);
+}
+
+
+.section-a::before {
+    background: url(SK\ Gaming\ logo.png);
+}
+
+.section-card:hover .section-a::before {
+    background: url(Sk\ pins.png);    
+}
+
+.section-b::before {
+    background: url(Yoshi825\ 1.png);
+}
+
+.section-card:hover .section-b::before {
+    background: url(Yoshi825\ 1-1.png);    
+}
+
+.section-c::before {
+    background: url(LeNain\ 1.png);
+}
+
+.section-card:hover .section-c::before {
+    background: url(LeNain\ 1-1.png);    
+}
+
+.section-d::before {
+    background: url(Joker\ 1.png);
+}
+
+.section-card:hover .section-d::before {
+    background: url(Joker\ 1-1.png);    
+}
+
+.section-e::before {
+    background: url(Pguijerro\ 1.png);
+}
+
+.section-card:hover .section-e::before {
+    background: url(Peguijarro\ 1-1.png);    
+}
+
+.section-f::before {
+    background: url(Oceanus\ Gaming\ logo.png);
+}
+.section-g::before {
+    background: url(Cube\ 1.png);
+}
+
+.section-card:hover .section-g::before {
+    background: url(Cube\ 1-1.png);    
+}
+
+.section-h::before {
+    background: url(Nob\ 1.png);
+}
+
+.section-card:hover .section-h::before {
+    background: url(Nob\ 1-1.png);    
+}
+
+.section-i::before {
+    background: url(Angelboy\ 1.png);
+}
+
+.section-card:hover .section-i::before {
+    background: url(Angelboy\ 1-1.png);    
+}
+
+.section-j::before {
+    background: url(Totem\ logo.png);
+}
+
+.section-card:hover .section-j::before {
+    background: url(Totem\ pins.png);    
+}
+
+.section-k::before {
+    background: url(Maru\ 1.png);
+}
+
+.section-card:hover .section-k::before {
+    background: url(Maru\ 1-1.png);    
+}
+
+.section-l::before {
+    background: url(IKaoss\ 1.png);
+}
+
+.section-card:hover .section-l::before {
+    background: url(Ikaos\ 1-1.png);    
+}
+
+.section-m::before {
+    background: url(Maury\ 1.png);
+}
+
+.section-card:hover .section-m::before {
+    background: url(Maury\ 1-1.png);    
+}
+
+.section-n::before {
+    background: url(ZETA\ logo.png);
+}
+
+.section-card:hover .section-n::before {
+    background: url(Zeta\ pins.png);    
+}
+
+.section-o::before {
+    background: url(MeOw\ 1.png);
+}
+
+.section-card:hover .section-o::before {
+    background: url(Meow\ 1-1.png);    
+}
+
+.section-p::before {
+    background: url(Gero\ 1.png);
+}
+
+.section-card:hover .section-p::before {
+    background: url(Gero\ 1-1.png);    
+}
+
+.section-q::before {
+    background: url(Nowy\ 1.png);
+}
+
+.section-card:hover .section-q::before {
+    background: url(Nowy297\ 1-1.png);    
+}
+
