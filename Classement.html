@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classement des Équipes E-sport</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .classement {
+            width: 1000px;
+            height: 900px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s;
+            background-color: #222;
+        }
+        .classement2 {
+            width: 1000px;
+            height: 1010px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s;
+            background-color: #222;
+        }
+
+        .classement:hover {
+            transform: translateY(-5px);
+        }
+
+        .classement img {
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Classement des Équipes E-sport</h1>
+    <div class="container">
+        <div class="classement">
+            <h2>Amérique du Nord</h2>
+            <img src="Classement nord américains 1.png" alt="Classement nord-américain 1">
+            <img src="Classement nord Américain 2.png" alt="Classement nord-américain 2">
+        </div>
+        <div class="classement">
+            <h2>Amérique du Sud</h2>
+            <img src="Classement Sud Americain 1.png" alt="Classement sud-américain 1">
+            <img src="Classement Sud Americain 2.png" alt="Classement sud-américain 2">
+        </div>
+        <div class="classement">
+            <h2>Asie-Pacifique</h2>
+            <img src="Classement Asia 1.png" alt="Classement Asie-Pacifique 1">
+            <img src="Classement Asia 2.png" alt="Classement Asie-Pacifique 2">
+        </div>
+        <div class="classement2">
+            <h2>Europe</h2>
+            <img src="Classement Europe 1.png" alt="Classement européen 1">
+            <img src="Classement Europe 2.png" alt="Classement européen 2">
+        </div>
+    </div>
+</body>
+</html>
