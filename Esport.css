@@ -150,7 +150,9 @@ body {
 .section-j::before {
     background: url(Luminosity\ Gaming.png);
 }
-
+.section-card:hover .section-j::before {
+    background: url(pins\ luminosity.png);    
+}
 .section-k::before {
     background: url(Charlz\ 1.png);
 }
