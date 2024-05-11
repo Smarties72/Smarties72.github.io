@@ -1,0 +1,195 @@
+body {
+    background-color: #101010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--main-family);
+    flex-direction: column;
+    height: 900vh;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+} 
+
+.section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    gap: 20px; 
+}
+
+.section-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 60px; 
+}
+
+.section {
+    z-index: 1;
+    padding: 10px;
+    margin: 10px;
+    border: 4px solid #2b2b2b;
+    border-radius: 10px;
+    position: relative;
+    color: white;
+    height: 500px;
+    width: 500px; 
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+    user-select: none;
+}
+
+.section-card:hover .section {
+    transform: rotateY(180deg);
+}
+
+.section-card:hover .section::before {
+    transform: rotateY(-180deg);
+}
+
+.section::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    opacity: 0.5;
+    transform: rotateY(180deg);
+}
+
+
+.section-a::before {
+    background: url(Calabresos\ logo.png);
+}
+
+.section-b::before {
+    background: url(Edinho\ 1.png);
+}
+
+.section-card:hover .section-b::before {
+    background: url(Edinho\ 1-1.png);    
+}
+
+.section-c::before {
+    background: url(FireCrow\ 1.png);
+}
+
+.section-card:hover .section-c::before {
+    background: url(Firecrow\ 1-1.png);    
+}
+
+.section-d::before {
+    background: url(KaioDog\ 1.png);
+}
+
+.section-card:hover .section-d::before {
+    background: url(Kaiodog\ 1-1.png);    
+}
+
+.section-e::before {
+    background: url(Alche\ 1-1.png);
+}
+
+.section-f::before {
+    background: url(Team\ Queso\ logo.png);
+}
+
+.section-card:hover .section-f::before {
+    background: url(pins\ team\ Queso.png);    
+}
+
+.section-g::before {
+    background: url(Jxcr\ 1.png);
+}
+
+.section-card:hover .section-g::before {
+    background: url(JXCR\ 1-1.png);    
+}
+
+.section-h::before {
+    background: url(Joackin\ 1.png);
+}
+
+.section-card:hover .section-h::before {
+    background: url(Joacking\ 1-1.png);    
+}
+
+.section-i::before {
+    background: url(Bryan\ 1.png);
+}
+
+.section-card:hover .section-i::before {
+    background: url(Bryan\ 1-1.png);    
+}
+
+.section-j::before {
+    background: url(SKCalalas\ logo.png);
+}
+
+.section-k::before {
+    background: url(Doritos\ 1.png);
+}
+
+.section-card:hover .section-k::before {
+    background: url(Doritos\ 1-1.png);    
+}
+
+.section-l::before {
+    background: url(Vtzim\ 1-1.png);
+}
+
+.section-card:hover .section-l::before {
+    background: url(Vtzim\ 1.png);    
+}
+
+.section-m::before {
+    background: url(Cauebr\ 1-1.png);
+}
+
+
+.section-n::before {
+    background: url(Fofoletes\ .png);
+}
+
+.section-o::before {
+    background: url(Pekka\ 1.png);
+}
+
+.section-card:hover .section-o::before {
+    background: url(Pekka\ 1-1.png);    
+}
+
+.section-p::before {
+    background: url(Mohtep\ 1.png);
+}
+
+.section-card:hover .section-p::before {
+    background: url(Mothep\ 1-1png.png);    
+}
+
+.section-q::before {
+    background: url(Jubileurb.png);
+}
+
