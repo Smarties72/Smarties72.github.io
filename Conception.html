@@ -55,9 +55,51 @@
             max-width: 50%;  /* Réduction de la largeur */
             height: auto;
         }
+        .top-arrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size: 24px;
+        color: #333;
+        text-decoration: none;
+        background-color: #f2f2f2;
+        padding: 10px;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        display: none; /* Masquée par défaut */
+        transition: all 0.3s ease;
+    }
+
+    .top-arrow:hover {
+        background-color: #ddd;
+        color: #000;
+        transform: scale(1.1);
+    }
+
+    .top-arrow-left {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        color: #333;
+        text-decoration: none;
+        background-color: #f2f2f2;
+        padding: 10px;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        display: block; 
+        transition: all 0.3s ease;
+    }
+
+    .top-arrow-left:hover {
+        background-color: #ddd;
+        color: #000;
+        transform: scale(1.1);
+    }
     </style>
 </head>
 <body>
+    <a href="index.html" class="top-arrow-left">⬅</a>    
     <h1>La conception du jeu vidéo "Brawls Stars"</h1>
     <h2>Qu'est-ce que "Brawls Stars" ?</h2>
     <div class="images-container">
@@ -164,5 +206,7 @@
     <a href="https://youtu.be/Uy-oe5VrM5A?si=YSEE1c27VSsfdvp6">Les doubleurs qui font les voies des personnages partie </a>
 </body>
 </html>
+
+
 
 
