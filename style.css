@@ -33,6 +33,7 @@ body {
     margin: auto;
     justify-items: center; /* Centre les images horizontalement */
     align-items: center; /* Centre les images verticalement */
+    margin-left: 10vw; /* Décalage horizontal pour centrer la grille */
 }
 /* Images */
 .image {
