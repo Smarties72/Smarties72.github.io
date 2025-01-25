@@ -1,49 +1,52 @@
+/* Corps de la page */
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
-    justify-content: flex-start; 
-    align-items: center; 
+    justify-content: flex-start; /* Aligné à gauche */
+    align-items: center; /* Centré verticalement */
     position: relative;
     overflow: hidden;
-    background-color: #000; 
+    background-color: #000; /* Ajout d'un fond noir par défaut */
 }
 
-
+/* Image de fond */
 .background {
-    position: fixed; 
+    position: fixed; /* Fixe l'image en arrière-plan */
     top: 0;
     left: 0;
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    z-index: -1; 
+    width: 100%; /* Prend toute la largeur */
+    height: 100%; /* Prend toute la hauteur */
+    object-fit: cover; /* Remplit l'écran sans déformation */
+    z-index: -1; /* Place l'image en arrière-plan */
 }
 
-
+/* Conteneur des images */
 .image-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(3, 1fr); 
-    gap: 10px; 
-    width: 80vw; 
-    height: 70vh; 
-    justify-items: center; 
-    align-items: center; 
-    margin-left: 10vw; 
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
+    grid-template-rows: repeat(3, 1fr); /* Trois rangées égales */
+    gap: 10px; /* Espacement entre les images */
+    width: 80vw; /* La grille occupe 80% de la largeur de l'écran */
+    height: 70vh; /* La grille occupe 70% de la hauteur de l'écran */
+    justify-items: center; /* Centre les images horizontalement */
+    align-items: center; /* Centre les images verticalement */
+    margin-left: 10vw; /* Décalage horizontal pour centrer la grille */
 }
+
+/* Images */
 .image {
     width: 100%;
     height: 100%;
-    max-width: 220px; 
-    max-height: 220px; 
-    object-fit: cover; 
-    border-radius: 10px; 
-    transition: opacity 0.3s ease-in-out; 
+    max-width: 220px; /* Limite la largeur des images */
+    max-height: 220px; /* Limite la hauteur des images */
+    object-fit: cover; /* Les images conservent leurs proportions */
+    border-radius: 10px; /* Arrondi des bords */
+    transition: opacity 0.3s ease-in-out; /* Transition fluide pour la transparence */
 }
 
-
+/* Effet de transparence au survol */
 .image-wrapper:hover .image {
-    opacity: 0.7; 
+    opacity: 0.7; /* Réduit l'opacité des images au survol */
 }
