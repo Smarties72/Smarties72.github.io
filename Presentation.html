@@ -2,64 +2,138 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programme Esport Brawl Stars</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: black;
-            color: white;
+            font-family: 'Roboto', sans-serif;
+            background-color: #0c0c0c;
+            color: #f5f5f5;
             margin: 0;
             padding: 20px;
         }
 
         h1, h2, h3, h4, h5 {
-            margin-top: 40px;
             text-align: center;
-            text-decoration: underline;
+            color: #FFD700;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            margin-top: 40px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #FFD700;
+            transition: transform 0.3s ease;
+        }
+
+        h1:hover, h2:hover, h3:hover, h4:hover, h5:hover {
+            transform: scale(1.1);
         }
 
         img {
             max-width: 100%;
-            display: block;
-            margin: 20px auto; 
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+            margin: 20px auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
+        }
+
         .img-container {
             display: flex;
             justify-content: center;
-            align-items: center;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
-        p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-            text-align: center;
+        p, ul {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin: 10px 0;
+            text-align: justify;
+            padding: 10px;
+            border-left: 3px solid #FFD700;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
         }
 
         a {
-            color: white;
+            color: #FFD700;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         a:hover {
-            text-decoration: underline;
+            color: #e74c3c;
         }
 
         .highlight {
-            color: #FFD700; 
+            color: #e74c3c;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .cta-button {
+            display: block;
+            margin: 40px auto;
+            padding: 15px 30px;
+            background-color: #e74c3c;
+            color: white;
+            font-size: 1.5em;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+
+        .cta-button:active {
+            transform: scale(0.98);
+        }
+
+        .highlight-text {
+            color: #FFD700;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 768px) {
+            .img-container {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>1. Tournoi : Comment ça marche l'esport ?</h1>  
-    <img src="Sk gaming roster.png">
+    <h1>1. Tournoi : Comment ça marche l'esport ?</h1>
+    <div class="img-container">
+        <img src="Sk gaming roster.png" alt="Sk Gaming Roster">
+    </div>
     <p>Le tournoi comporte quatre parties :</p>
-    <p>Défi du championnat en jeu (mondial)</p>
-    <p>Qualification régionale en ligne (régionale)</p>
-    <p>Finales mensuelles (mondiales)</p>
-    <p>Finale des mondiaux (mondiale)</p>
-    <p>Régions :</p>
+    <ul>
+        <li><span class="highlight-text">Défi du championnat en jeu</span> (mondial)</li>
+        <li><span class="highlight-text">Qualification régionale en ligne</span> (régionale)</li>
+        <li><span class="highlight-text">Finales mensuelles</span> (mondiales)</li>
+        <li><span class="highlight-text">Finale des mondiaux</span> (mondiale)</li>
+    </ul>
     <p>Les joueurs participeront au tournoi en fonction de leur région de résidence :</p>
     <ul>
         <li>Europe, Moyen-Orient et Afrique (EMEA) - 3 places</li>
@@ -68,107 +142,73 @@
         <li>Amérique du Nord et Amérique Latine région Nord (NA & LATAM N) - 1 place</li>
         <li>Amérique Latine région Sud (LATAM S) - 1 place</li>
     </ul>
-    <p>Fonctionnement des matchs/règles :</p>
-    <ul>
-        <li>Partie - une partie est jouée en mode et carte présélectionnés. Si 1 partie est gagné par les 2 équipes alors une 3 ème partie est lancé pour les départager</li>
-        <li>Manche - 2 partie gagnante dans l'un des modes de jeu suivants disponibles dans Brawl Stars :
-            <ul>
-                <li>Siège</li>
-                <li>Prime</li>
-                <li>Razzia de gemmes</li>
-                <li>Braquage</li>
-                <li>Brawlball</li>
-            </ul>
-        </li>
-        <li>La victoire est attribuée à l'équipe qui gagne 2 ou 3 manches en fonction des règles du tournoi (généralement 3 en tournoi mondial)</li>
-    </ul>
-    <p>Règlement de bannissement de brawler :</p>
-    <ul>
-        <li>Pour chaque match, les équipes sont autorisées à bannir un brawler chacune. Les brawlers ainsi bannis ne pourront pas être utilisés par les deux équipes prenant part au match.</li>
-        <li>Si l'une des équipes choisit un brawler banni, la carte sera rejouée. Si une équipe choisit un brawler banni pour la deuxième fois dans le même match, elle recevra une défaite par défaut pour ce dernier.</li>
-    </ul>
-    <p>Règlement de présence :</p>
-    <ul>
-        <li>Chaque équipe dispose de 15 minutes pour se présenter à un match en ligne (date de début du match + 15 minutes). Si une équipe ne se présente pas dans les 15 minutes, elle perd automatiquement le match.</li>
-    </ul>
-    <p>Règlement de Remplacement :</p>
-    <ul>
-        <li>Pendant les qualifications régionales en ligne, les équipes ne sont soumises à aucune restriction concernant les remplacements entre les quatre joueurs composant une équipe.</li>
-        <li>Pendant les finales mensuelles, les équipes sont autorisées à remplacer les joueurs entre deux matchs.</li>
-    </ul>
 
     <h2>2. Point de classement : Un système de point de classement ?</h2>
     <div class="img-container">
-        <img src="World 2022.png">
-        <img src="world 2023.png"></div>
-    <p> systèmes de points est le suivant :</p>
-    <p>Les équipes de chaque région remporteront des points de rang pour se qualifier pour la finale des mondiaux en fonction de leur région de participation. Les meilleures équipe des qualifications régionales en ligne remporteront une place pour les finales mensuelles :</p>
+        <img src="World 2022.png" alt="World 2022">
+        <img src="world 2023.png" alt="World 2023">
+    </div>
+    <p>Le système de points est le suivant :</p>
     <ul>
-        <li>EMEA :
-            <ul>
-                <li>Rang 1 - Qualification pour la finale mensuelle</li>
-                <li>Rang 2 - Qualification pour la finale mensuelle</li>
-                <li>Rang 3 - Qualification pour la finale mensuelle</li>
-                <li>Rang 4 - 20 points</li>
-                <li>Rangs 5 à 8 - 10 points</li>
-                <br>
-        APAC :
-                <li>Rang 1 - Qualification pour la finale mensuelle</li>
-                <li> 2 - Qualification pour la finale mensuelle</li>
-                 <li>  Rang 3 - 20 points</li>
-                 <li>  Rang 4 - 10 points</li>
-                <br>
-                Chine :
-                <li>Rang 1 - Qualification pour la finale mensuelle</li>
-                <li>Rang 2 - 20 points
-                <li>Rang 3 - 10 points</li>
-                <li>Rang 4 - 10 points</li>
-                <br>
-                NA & LATAM N :
-                <li>Rang 1 - Qualification pour la finale mensuelle</li>
-                <li>Rang 2 - 20 points</li>
-                <li>Rang 3 - 10 points</li>
-                <li>Rang 4 - 10 points</li>
-                <br>
-                LATAM S :
-                <li>Rang 1 - Qualification pour la finale mensuelle</li>
-                <li>Rang 2 - 20 points</li>
-                <li>Rang 3 - 10 points</li>
-                <li>Rang 4 - 10 points</li>
-<br>
-Système de point des finales mensuelles :
-
-Les équipes atteignant la finale mensuelle remportent des points en fonction de leur classement :
-                  <li>Rang 1 - 100 points</li>
-                  <li>Rang 2 - 80 points</li>
-                  <li>Rang 3 - 60 points</li>
-                  <li>Rang 4 - 60 points</li>
-                  <li>Rang 5 - 40 points</li>
-                  <li>Rang 6 - 40 points</li>
-                    <li>Rang 7 - 40 points</li>
-                  <li>Rang 8 - 40 points</li>
-                </p>  
-            </ul>
-        </li>
+        <li>EMEA :</li>
+        <ul>
+            <li>Rang 1 - Qualification pour la finale mensuelle</li>
+            <li>Rang 2 - Qualification pour la finale mensuelle</li>
+            <li>Rang 3 - Qualification pour la finale mensuelle</li>
+            <li>Rang 4 - 20 points</li>
+            <li>Rangs 5 à 8 - 10 points</li>
+        </ul>
+        <li>APAC :</li>
+        <ul>
+            <li>Rang 1 - Qualification pour la finale mensuelle</li>
+            <li>Rang 2 - Qualification pour la finale mensuelle</li>
+            <li>Rang 3 - 20 points</li>
+            <li>Rang 4 - 10 points</li>
+        </ul>
+        <li>Chine :</li>
+        <ul>
+            <li>Rang 1 - Qualification pour la finale mensuelle</li>
+            <li>Rang 2 - 20 points</li>
+            <li>Rang 3 - 10 points</li>
+        </ul>
+        <li>NA & LATAM N :</li>
+        <ul>
+            <li>Rang 1 - Qualification pour la finale mensuelle</li>
+            <li>Rang 2 - 20 points</li>
+            <li>Rang 3 - 10 points</li>
+        </ul>
+        <li>LATAM S :</li>
+        <ul>
+            <li>Rang 1 - Qualification pour la finale mensuelle</li>
+            <li>Rang 2 - 20 points</li>
+            <li>Rang 3 - 10 points</li>
+        </ul>
+    </ul>
+    <p>Système de points des finales mensuelles :</p>
+    <ul>
+        <li>Rang 1 - 100 points</li>
+        <li>Rang 2 - 80 points</li>
+        <li>Rang 3 - 60 points</li>
+        <li>Rang 4 - 60 points</li>
+        <li>Rang 5 - 40 points</li>
+        <li>Rang 6 - 40 points</li>
+        <li>Rang 7 - 40 points</li>
+        <li>Rang 8 - 40 points</li>
     </ul>
 
-    <h3>3. Un partenariat avec Brawls Stars : Qu'est-ce que le programme de partenariat ?</h3>
-    <img src="Crazy Racoon roster.png">
-    <p>Pour aider à soutenir vos équipes préférées, Supercell a fait équipe avec les plus grandes organisations e-sport : ZETA Division, NAVI, SK Gaming, STMN, Team Queso, Tribe Gaming, Reply Totem, Qlash, FUT Esports et Luminosity Gaming, ainsi qu'un nouvel arrivant !
-    Le partenariat offre à chaque équipe ses propres émotes, tags, icônes de profil (pour celles qui se qualifient à la finale du mondial) et skins (pour les champions du monde !), dispos dans le magasin en jeu.
-
-
-    Un nouveau challenger est arrivé et il s'appelle : SpaceStation (abréviation : SSG) !
-    
-    Elle rejoint le programme de partenariat, et avec elle Tuni, Fade, Toast et RBM (marques qui sponsorisent les équipes E-sport) qui représentent la région Amérique du Nord.
-    </p>
+    <h3>3. Un partenariat avec Brawl Stars : Qu'est-ce que le programme de partenariat ?</h3>
+    <div class="img-container">
+        <img src="Crazy Racoon roster.png" alt="Crazy Racoon Roster">
+    </div>
+    <p>Supercell a fait équipe avec les plus grandes organisations e-sport : ZETA Division, NAVI, SK Gaming, STMN, Team Queso, Tribe Gaming, Reply Totem, Qlash, FUT Esports et Luminosity Gaming, ainsi qu'un nouvel arrivant, SpaceStation (SSG), représentant la région Amérique du Nord. Ces partenariats offrent des émotes, des skins et des icônes de profil.</p>
 
     <h4>3.1 Où puis-je trouver ces cosmétiques en jeu ?</h4>
-    <p>Vous pouvez les retrouver dans Magasin -> Catalogue -> Thèmes et en appuyant sur l'icône indiquée :</p>
+    <p>Allez dans Magasin -> Catalogue -> Thèmes pour les retrouver.</p>
 
     <h5>3.2 Comment devenir partenaire ?</h5>
-    <img src="Tribe Gaming roster.png">
-    <p>Il faut être à la tête d'une grande organisation e-sport et créer du contenu autour de l'équipe. Brawls Stars examine chaque candidature qui leur arrive via un formulaire.</p>
-    <p>Cela dit, le circuit e-sport est ouvert à tous, donc même ceux qui ne rejoignent pas le programme de partenariat sont encouragés à prendre part à la compétition !
-    La première diffusion de l'année aura lieu les 30 et 31 mars, et vous pourrez visionner, interagir et gagner des récompenses sur : <a href="event.brawlstars.com">https://event.supercell.com/brawlstars/fr</a></p>
+    <div class="img-container">
+        <img src="Tribe Gaming roster.png" alt="Tribe Gaming Roster">
+    </div>
+    <p>Les grandes organisations e-sport peuvent candidater via un formulaire pour rejoindre le programme de partenariat Brawl Stars. Le circuit e-sport est ouvert à tous, même sans partenariat officiel. La première diffusion de l'année aura lieu les 30 et 31 mars, et vous pourrez visionner l'événement sur : <a href="https://event.supercell.com/brawlstars/fr" target="_blank">https://event.supercell.com/brawlstars/fr</a></p>
 </body>
+</html>
