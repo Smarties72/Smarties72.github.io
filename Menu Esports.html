@@ -5,48 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu E-sport</title>
     <style>
+        /* Corps de la page */
         body {
-            font-family: Arial, sans-serif;
-            background-image: url(test\ fond\ brawls\ stars.png);
-            margin: 20;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 120vh;
+            height: 100vh;
+            overflow: hidden;
+            color: white;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            animation: gradientBG 10s infinite alternate; /* Dégradé animé */
         }
 
+        /* Animation du fond */
+        @keyframes gradientBG {
+            0% {
+                background: linear-gradient(135deg, #1e3c72, #2a5298);
+            }
+            50% {
+                background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            }
+            100% {
+                background: linear-gradient(135deg, #43cea2, #185a9d);
+            }
+        }
+
+        /* Conteneur principal */
+        .content {
+            text-align: center;
+            z-index: 2;
+        }
+
+        /* Titre */
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 50px;
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Conteneur des boutons */
         .button-container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 20px; /* Espacement entre les boutons */
         }
 
+        /* Style des boutons */
         .button {
-            background-color: #4CAF50; 
-            border: none; 
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            border: none;
             color: white;
-            text-align: center;
-            text-decoration: none; 
-            display: inline-block;
-            font-size: 30px; 
-            padding: 20px 20px; 
-            margin: 40px 0; 
+            font-size: 1.5rem;
+            padding: 15px 40px;
             cursor: pointer;
-            border-radius: 5px; 
-            transition: background-color 0.3s; 
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
+        /* Effets au survol des boutons */
         .button:hover {
-            background-color: #45a049; 
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Images latérales */
+        .side-images {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .side-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            animation: sideImageFade 10s infinite alternate;
+        }
+
+        /* Animation des images latérales */
+        @keyframes sideImageFade {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .button {
+                font-size: 1.2rem;
+                padding: 12px 30px;
+            }
+
+            .side-image {
+                width: 100px;
+                height: 100px;
+            }
         }
     </style>
 </head>
-<body >
-    <div class="button-container">
-        <a href="Presentation"><button class="button" >Présentation</button>
-        <a href="Menu équipes"><button class="button" >Equipes</button></a>
-        <a href="Classement"><button class="button">classement</button></a>
+<body>
+    <div class="side-images">
+        <img src="Sk pins.png" alt="Image gauche" class="side-image" style="animation-delay: 0s;">
+        <img src="Zeta pins.png" alt="Image droite" class="side-image" style="animation-delay: 5s;">
+    </div>
+    <div class="content">
+        <h1>Bienvenue au Menu E-sport</h1>
+        <div class="button-container">
+            <a href="Presentation"><button class="button">Présentation</button>
+            <a href="Menu équipes"><button class="button">Équipes</button>
+            <a href="Classement"><button class="button">Classement</button>
+        </div>
     </div>
 </body>
 </html>
