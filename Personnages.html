@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Page avec Carrés</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #808080 !important; /* Fond gris */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            justify-content: flex-start;
+            overflow: hidden; /* Empêche toute barre de défilement globale */
+            -ms-overflow-style: none;  /* Cache la barre de défilement dans IE et Edge */
+            scrollbar-width: none; /* Cache la barre de défilement dans Firefox */
+        }
+
+        ::-webkit-scrollbar {
+            display: none; /* Cache la barre de défilement sur Chrome, Safari, et Opera */
+        }
+
+        .titre {
+            margin-top: 20px;
+            font-size: 3rem;
+            color: black;
+            text-decoration: underline;
+            text-align: center;
+            width: 100%; /* S'assure que le titre occupe toute la largeur */
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 carrés par ligne */
+            gap: 20px; /* Espacement entre les carrés */
+            padding: 20px;
+            width: 100%;
+            max-width: 1000px;
+            height: 100vh; /* Hauteur du conteneur, on laisse la page défiler */
+            justify-items: center; /* Centre les carrés horizontalement */
+            scroll-behavior: smooth; /* Pour un défilement fluide */
+            overflow-y: scroll; /* Permet le défilement vertical dans le container */
+        }
+
+        .carre {
+            width: 250px; /* Taille des carrés agrandie */
+            height: 250px; /* Taille des carrés agrandie */
+            border: 7px solid black; /* Bordure autour des carrés */
+            border-radius: 20px; /* Coins arrondis */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carre img {
+            width: 50%; /* Image qui remplit le carré */
+            height: 100%;
+            object-fit: contain; /* Garde le ratio de l'image tout en remplissant le carré */
+            display: block; /* Supprime l'espace en dessous de l'image */
+            margin: 0 auto;
+        }
+
+        .text-blanc, .text-vert, .text-bleu, .text-violet, .text-rouge, .text-jaune {
+            font-size: 1rem;
+            text-align: center;
+            margin-top: 10px; /* Espacement entre le carré et le texte */
+            font-weight: bold;
+        }
+
+        .text-blanc {
+            color: white;
+        }
+
+        .text-vert {
+            color: green;
+        }
+
+        .text-bleu {
+            color: blue;
+        }
+
+        .text-violet {
+            color: violet;
+        }
+
+        .text-rouge {
+            color: red;
+        }
+        .text-jaune {
+            color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="titre">Les Brawleurs</h1>
+    
+    <div class="container">
+        <!-- Carrés avec texte en dessous -->
+        <div>
+            <div class="carre"><img src="Shelly.png" alt="Image 1"></div>
+            <div class="text-blanc">Shelly</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Nita.png" alt="Image 2"></div>
+            <div class="text-vert">Nita</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Colt.png" alt="Image 3"></div>
+            <div class="text-vert">Colt</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Bull.png" alt="Image 4"></div>
+            <div class="text-vert">Bull</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Brock.png" alt="Image 5"></div>
+            <div class="text-vert">Brock</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Primo.png" alt="Image 6"></div>
+            <div class="text-vert">El Costo</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Bartaba.png" alt="Image 7"></div>
+            <div class="text-vert">Bartaba</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Poco.png" alt="Image 8"></div>
+            <div class="text-vert">Poco</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Rosa.png" alt="Image 9"></div>
+            <div class="text-vert">Rosa</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Jessie.png" alt="Image 10"></div>
+            <div class="text-bleu">Jessie</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Dynamike.png" alt="Image 11"></div>
+            <div class="text-bleu">Dynamike</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Tick.png" alt="Image 12"></div>
+            <div class="text-bleu">Tick</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Arkad.png" alt="Image 13"></div>
+            <div class="text-bleu">A.R.K.A.D</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Ricochet.png" alt="Image 14"></div>
+            <div class="text-bleu">Ricochet</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Darryl.png" alt="Image 15"></div>
+            <div class="text-bleu">Darryl</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Penny.png" alt="Image 16"></div>
+            <div class="text-bleu">Penny</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Carl.png" alt="Image 17"></div>
+            <div class="text-bleu">Carl</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Jacky.png" alt="Image 18"></div>
+            <div class="text-bleu">Jacky</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Gus.png" alt="Image 19"></div>
+            <div class="text-bleu">Gus</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Bo.png" alt="Image 20"></div>
+            <div class="text-violet">Bo</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Eliza.png" alt="Image 21"></div>
+            <div class="text-violet">Eliz@</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Stu.png" alt="Image 22"></div>
+            <div class="text-violet">Stu</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Polly.png" alt="Image 23"></div>
+            <div class="text-violet">Polly</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Pam.png" alt="Image 24"></div>
+            <div class="text-violet">Pam</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Frank.png" alt="Image 25"></div>
+            <div class="text-violet">Frank</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Billie.png" alt="Image 26"></div>
+            <div class="text-violet">Billie</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Béa.png" alt="Image 27"></div>
+            <div class="text-violet">Béa</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Nani.png" alt="Image 28"></div>
+            <div class="text-violet">Nani</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Edgar.png" alt="Image 29"></div>
+            <div class="text-violet">Edgar</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Griff.png" alt="Image 30"></div>
+            <div class="text-violet">Griff</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Grom.png" alt="Image 31"></div>
+            <div class="text-violet">Grom</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Bonnie.png" alt="Image 32"></div>
+            <div class="text-violet">Bonnie</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Gaêl.png" alt="Image 33"></div>
+            <div class="text-violet">Gaël</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Colette.png" alt="Image 34"></div>
+            <div class="text-violet">Colette</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Belle.png" alt="Image 35"></div>
+            <div class="text-violet">Belle</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Ash.png" alt="Image 36"></div>
+            <div class="text-violet">Ash</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Lola.png" alt="Image 37"></div>
+            <div class="text-violet">Lola</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Sam.png" alt="Image 38"></div>
+            <div class="text-violet">Sam</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Mandy.png" alt="Image 39"></div>
+            <div class="text-violet">Mandy</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Maisie.png" alt="Image 40"></div>
+            <div class="text-violet">Maisie</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Hank.png" alt="Image 41"></div>
+            <div class="text-violet">Hank</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Pearl.png" alt="Image 42"></div>
+            <div class="text-violet">Pearl</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Larry.png" alt="Image 43"></div>
+            <div class="text-violet">Larry&Lawrie</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Angelo.png" alt="Image 44"></div>
+            <div class="text-violet">Angelo</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Berry.png" alt="Image 45"></div>
+            <div class="text-violet">Berry</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Shade.png" alt="Image 46"></div>
+            <div class="text-violet">Shade</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Meeple.png" alt="Image 47"></div>
+            <div class="text-violet">Meeple</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Mortis.png" alt="Image 48"></div>
+            <div class="text-rouge">Mortis</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Tara.png" alt="Image 49"></div>
+            <div class="text-rouge">Tara</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Djinn.png" alt="Image 50"></div>
+            <div class="text-rouge">D'jinn</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Max.png" alt="Image 51"></div>
+            <div class="text-rouge">Max</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Monsieur p.png" alt="Image 52"></div>
+            <div class="text-rouge">Monsieur M</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Wally.png" alt="Image 53"></div>
+            <div class="text-rouge">Wally</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Byron.png" alt="Image 54"></div>
+            <div class="text-rouge">Byron</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Squeak.png" alt="Image 55"></div>
+            <div class="text-rouge">Squeak</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Lou.png" alt="Image 56"></div>
+            <div class="text-rouge">Lou</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Medor.png" alt="Image 57"></div>
+            <div class="text-rouge">Médor</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Buzz.png" alt="Image 58"></div>
+            <div class="text-rouge">Buzz</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Fang.png" alt="Image 59"></div>
+            <div class="text-rouge">Fang</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Eve.png" alt="Image 60"></div>
+            <div class="text-rouge">Eve</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Janet.png" alt="Image 61"></div>
+            <div class="text-rouge">Janet</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Otis.png" alt="Image 62"></div>
+            <div class="text-rouge">Otis</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Buster.png" alt="Image 63"></div>
+            <div class="text-rouge">Buster</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Gray.png" alt="Image 64"></div>
+            <div class="text-rouge">Gray</div>
+        </div>
+        <div>
+            <div class="carre"><img src="rt.png" alt="Image 65"></div>
+            <div class="text-rouge">R-T</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Willow.png" alt="Image 66"></div>
+            <div class="text-rouge">Willow</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Doug.png" alt="Image 67"></div>
+            <div class="text-rouge">Doug</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Chuck.png" alt="Image 68"></div>
+            <div class="text-rouge">Chuck</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Charlie.png" alt="Image 69"></div>
+            <div class="text-rouge">Charlie</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Mico.png" alt="Image 70"></div>
+            <div class="text-rouge">Mico</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Melodie.png" alt="Image 71"></div>
+            <div class="text-rouge">Melody</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Lily.png" alt="Image 72"></div>
+            <div class="text-rouge">Lily</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Clancy.png" alt="Image 73"></div>
+            <div class="text-rouge">Clancy</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Moe.png" alt="Image 74"></div>
+            <div class="text-rouge">Moe</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Juju.png" alt="Image 75"></div>
+            <div class="text-rouge">Juju</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Spike.png" alt="Image 76"></div>
+            <div class="text-jaune">Spike</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Corbac.png" alt="Image 77"></div>
+            <div class="text-jaune">Corbac</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Leon.png" alt="Image 78"></div>
+            <div class="text-jaune">Léon</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Emerie.png" alt="Image 79"></div>
+            <div class="text-jaune">Emeri</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Ambre.png" alt="Image 80"></div>
+            <div class="text-jaune">Ambre</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Meg.png" alt="Image 81"></div>
+            <div class="text-jaune">Meg</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Surge.png" alt="Image 82"></div>
+            <div class="text-jaune">Surge</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Chester.png" alt="Image 83"></div>
+            <div class="text-jaune">Chester</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Cordelius.png" alt="Image 84"></div>
+            <div class="text-jaune">Cordelius</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Kit.png" alt="Image 85"></div>
+            <div class="text-jaune">Kit</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Draco.png" alt="Image 86"></div>
+            <div class="text-jaune">Draco</div>
+        </div>
+        <div>
+            <div class="carre"><img src="Kenji.png" alt="Image 87"></div>
+            <div class="text-jaune">Kenji</div>
+        </div>
+        <div class="clear"></div>
+        <h2 class="titre">Les Brawleurs Temporaires</h2>
+        <div class="clear"></div>
+        <div>
+            <div class="carre"><img src="Buzz l'éclair.png" alt="Image 1.1"></div>
+            <div class="text-jaune">Buzz l'éclair</div>
+        </div>
+    </div>
+</body>
+</html>
