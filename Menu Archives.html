@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page avec Boutons et Images</title>
+  <style>
+    body {
+      background-color: #f0f2f5;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+
+    header, footer {
+      width: 100%;
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+
+    /* Agrandir les images */
+    header img, footer img {
+      max-width: 200px; 
+      height: auto;
+    }
+    
+    #img1, #img2, #img3, #img4, #img5 {
+      border-radius: 15px;
+    }
+
+    @keyframes lighting {
+      0% { filter: brightness(1); }
+      50% { filter: brightness(1.5); }
+      100% { filter: brightness(1); }
+    }
+
+    .highlight {
+      animation: lighting 1s ease-in-out;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 250px; 
+      background: linear-gradient(145deg, #1abc9c, #16a085);
+      color: #fff;
+      padding: 15px 0;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px; 
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: linear-gradient(145deg, #16a085, #1abc9c);
+      transform: translateY(-3px);
+    }
+
+    /* Effet au clic */
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    /* Adaptation pour les petits écrans */
+    @media (max-width: 600px) {
+      .btn {
+        width: 200px;
+        padding: 12px 0;
+        font-size: 14px;
+        margin: 8px;
+      }
+      header img, footer img {
+        max-width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img id="img1" src="Brawls Talk.png" alt="Brawls Talk">
+    <img id="img2" src="phrise chronologique.png" alt="Chronologie">
+    <img id="img3" src="nerf et buff.png" alt="Equilibrages/méta">
+  </header>
+
+  <div class="container">
+    <a class="btn" id="btn1" href="#">Brawls Talk</a>
+    <a class="btn" id="btn2" href="#">Chronologie</a>
+    <a class="btn" id="btn3" href="#">Equilibrages/méta</a>
+    <a class="btn" id="btn4" href="#">Evolution graphique</a>
+    <a class="btn" id="btn5" href="#">glitch/bug</a>
+    <a class="btn" id="btn6" href="#">objets supprimer</a>
+  </div>
+
+  <footer>
+    <img id="img4" src="remodel.png" alt="Evolution graphique">
+    <img id="img5" src="bug glitch.png" alt="glitch/bug">
+    <img id="img6" src="objet supprimé.png" alt="objets supprimer">
+  </footer>
+
+  <script>
+    function addHoverEffect(btnId, imgId) {
+      const btn = document.getElementById(btnId);
+      const img = document.getElementById(imgId);
+      btn.addEventListener('mouseover', () => {
+        img.classList.add('highlight');
+      });
+      btn.addEventListener('mouseout', () => {
+        setTimeout(() => {
+          img.classList.remove('highlight');
+        }, 1000); // durée de l'animation en ms
+      });
+    }
+
+    addHoverEffect('btn1', 'img1');
+    addHoverEffect('btn2', 'img2');
+    addHoverEffect('btn3', 'img3');
+    addHoverEffect('btn4', 'img4');
+    addHoverEffect('btn5', 'img5');
+    addHoverEffect('btn6', 'img6');
+  </script>
+</body>
+</html>
